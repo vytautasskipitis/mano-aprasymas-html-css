@@ -102,6 +102,7 @@ article {
 .flex-element div:hover {
     padding: 4%;
     transition: 0.7s;
+    background-color: rgba(165, 124, 155, 0.466);
 }
 
 /* EXAMPLE END : */
