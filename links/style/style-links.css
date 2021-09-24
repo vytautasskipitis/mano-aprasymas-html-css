@@ -16,7 +16,7 @@ a {
 }
 
 a:hover {
-    background-color: rgba(71, 46, 46, 0.5);
+    background-color: rgba(255, 255, 255, 0.521);
     transition: 0.5s;
 }
 

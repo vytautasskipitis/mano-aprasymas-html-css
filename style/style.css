@@ -1,7 +1,13 @@
+/* font size didėjimas nuo screeno => (16px + (16 - 8) */
+
 body {
     font-size: calc(16px + (16 - 8) * ((100vw - 320px) / (1200 - 320)));
     text-align: center;
 }
+
+
+/* navbaras */
+
 header {
     display: grid;
     grid-template-columns:repeat(1 ,1fr);
@@ -9,20 +15,22 @@ header {
     grid-row-gap: 5px;
     padding-bottom: 20px;
 }
-header div:hover {
+header div a div:hover {
     background-color: rgba(71, 46, 46, 0.5);
     transition: 0.5s;
 }
-header div { 
+header div a div { 
     line-height: 50px;
     border-radius: 5px;
     border: 3px solid black;
     background-color: rgba(71, 46, 46, 0.24);
 }
-header div a {
+/* du viename */
+header div a, .flex-element div a {
     text-decoration: none;
     color:rgb(0, 0, 0);
 }
+
 
 
 
@@ -32,7 +40,6 @@ section {
 #name {
     font-size: calc(30px + (16 - 8) * ((100vw - 320px) / (1200 - 320)));
 }
-
 article {
     margin-left: 5%;
     margin-right: 5%;
@@ -42,17 +49,11 @@ article {
 
 /* EXAMPLE START : */
 
-.a, .b, .c { 
-    margin: 10px ; 
-    border-radius: 10px;
-    background-color: rgba(189, 83, 83, 0.281);
-    border: 3px solid rgb(0, 0, 0);
-}
 .a { grid-area: a; }
 .b { grid-area: b; }
 .c { grid-area: c; }
 .grid-table {
-    min-height: 500px;
+    min-height: 700px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
@@ -61,15 +62,24 @@ article {
     "c ."
     ;
 }
+.a, .b, .c { 
+    margin: 10px ; 
+    border-radius: 10px;
+    background-color: rgba(189, 83, 83, 0.281);
+    border: 3px solid rgb(0, 0, 0);
+}
 
 
 
-.flex-element div {
+.letter-click {
     background-color: rgb(165, 124, 155);
-    padding: 2%;
-    margin: 2%;
+    
     border-radius: 10px;
     border: 1px solid black;
+
+    padding: 5px;
+    margin: 5px;
+   
 }
 
 
@@ -90,20 +100,23 @@ article {
 
 
 
-.flex-element div:first-child {
-    color: rgb(59, 31, 31);
+.flex-element div:first-child a div {
+    color: rgb(97, 30, 30);
 }
-.flex-element div:last-child {
+.flex-element div:last-child a div {
     color: rgb(43, 88, 57);
 }
 
 
 
-.flex-element div:hover {
-    padding: 4%;
+.letter-click:hover {
+    padding: 10px;
+    margin: 10px;
+    transform: rotate(30deg);
     transition: 0.7s;
     background-color: rgba(165, 124, 155, 0.466);
 }
+
 
 /* EXAMPLE END : */
 
